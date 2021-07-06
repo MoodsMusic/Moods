@@ -38,7 +38,10 @@ const UserSchema = new Schema({
         type: Date,
         default: Date.now
     },
-
+    isAdmin: {
+        type: Boolean,
+        default: false,
+    }
 });
 
 UserSchema.pre('save', async function (next) {
@@ -52,11 +55,8 @@ UserSchema.pre('save', async function (next) {
     next();
 });
 
-UserSchema.methods.comparePassword = function (candidatePassword, cb) {
-    bcrypt.compare(candidatePassword, this.password, function (err, isMatch) {
-        if (err) return cb(err);
-        cb(null, isMatch);
-    });
+UserSchema.methods.comparePassword = function (candidatePassword) {
+    return bcrypt.compareSync(candidatePassword, this.password);
 };
 
 UserSchema.plugin(uniqueValidator);
