@@ -1,9 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const logger = require("morgan");
 const controllers = require("./controllers");
 
 const app = express();
 const PORT = process.env.PORT || 8000;
+app.use(logger("combined"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/MoodsDB", { useNewUrlParser: true, useUnifiedTopology: true });
 
