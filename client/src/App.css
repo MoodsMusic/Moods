@@ -19,10 +19,28 @@
 .home header > h1 {
   font-size: 36px;
   letter-spacing: 0.9rem;
+  visibility: hidden;
+  animation: slide-right 2s forwards;
 }
 
-.home p {
+.home header > p {
+  padding-left: 3px;
   font-size: 18px;
+  visibility: hidden;
+  animation: slide-right 2s 1s forwards;
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-100%) scale(3);
+    filter: blur(6px);
+    visibility: hidden;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+    visibility: visible;
+  }
 }
 
 .home .hero {
@@ -35,9 +53,92 @@
   background-blend-mode: screen, difference, lighten;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
   width: 100%;
-  min-height: 900px;
+  min-height: 100vh;
   top: 0;
   z-index: 1;
 }
+
+.home .arrow-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 10s linear infinite;
+  cursor: pointer;
+}
+
+.home .arrow-down i {
+  font-size: 50px;
+  color: rgb(60, 232, 245);
+}
+
+.home .arrow-down::before {
+  content: "";
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  border: 3px solid rgb(60, 232, 245);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes bounce {
+  /* Do nothing for first 9 seconds to create delay between interations */
+  0% {
+    transform: translate(-50%, 0);
+  }
+  80% {
+    transform: translate(-50%, 0);
+  }
+  85% {
+    transform: translate(-50%, -35px);
+  }
+  88% {
+    transform: translate(-50%, 0);
+  }
+  91% {
+    transform: translate(-50%, -16px);
+  }
+  93% {
+    transform: translate(-50%, 0);
+  }
+  96% {
+    transform: translate(-50%, -8px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+.home .section1 {
+  position: relative;
+  top: 100vh;
+}
+
+.home .section1 > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .section1 > div > .left-col,
+.home .section1 > div > .right-col {
+  flex: 1;
+  height: 400px;
+  background: white;
+  margin-bottom: 60px;
+} 
+
+.home .section1 > div > .left-col {
+  margin-left: 50px;
+}
+
+.home .section1 > div > .right-col {
+  border-left: 2px solid rgb(60, 232, 245);
+  margin-right: 50px;
+}
+
+/* End home page styling */
