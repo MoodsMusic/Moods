@@ -30,4 +30,32 @@ router.post("/login", async (req, res) => {
     }
 });
 
+router.post("/register", async (req, res) => {
+    try {
+        const user = new User({
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            username: req.body.username,
+            email: req.body.email,
+            password: req.body.password,
+        });
+
+        const savedUser = await user.save(function (err, doc) {
+            if (err) {
+                res.status(400).json(err);
+            } else {
+                res.status(201).json({
+                    id: user._id,
+                    name: user.username,
+                    email: user.email,
+                    isAdmin: user.isAdmin,
+                    token: generateToken(user)
+                });
+            }
+        });
+    } catch (e) {
+        res.status(500).json(e);
+    }
+});
+
 module.exports = router;
