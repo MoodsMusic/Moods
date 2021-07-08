@@ -21,26 +21,6 @@ const Home = () => {
         );
 
         observer.observe(wrapper);
-
-        // Observer for text sliding
-        const ps = document.querySelectorAll(".highlight");
-        const className2 = "slide";
-
-        const observer2 = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add(className2);
-                        return;
-                    }
-                    entry.target.classList.remove(className2);
-                });
-            },
-        );
-
-        ps.forEach((p) => {
-            observer2.observe(p.parentElement.parentElement);
-        });
     }, []);
 
     return (
@@ -60,8 +40,8 @@ const Home = () => {
                 <h2 className="text-center">Music</h2>
                 <div id="highlight-effect">
                     <div className="left-col">
-                        <p><span className="highlight">Search for songs from our collection...</span></p>
-                        <p><span className="highlight">Listen to music...</span></p>
+                        <p><span className="highlight">Search for songs from our collection</span></p>
+                        <p><span className="highlight">Listen to music</span></p>
                         <p><span className="highlight">Share your feelings or thoughts</span></p>
                     </div>
                     <div className="right-col">
@@ -74,6 +54,7 @@ const Home = () => {
 
             <Section sectionNum={"section2"}>
                 <p className="text-center">Create posts or diary entries.</p>
+                <p className="text-center">When you create a post you can attach a song for reference</p>
             </Section>
         </main>
     );
