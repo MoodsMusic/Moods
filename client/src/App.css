@@ -1,3 +1,43 @@
+/* Home page styling */
+
 .home {
   color: white; 
+}
+
+.home header {
+  background: rgb(24, 24, 24);
+  color: #fff;
+  width: 100%;
+  padding: 6px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  z-index: 2;
+}
+
+.home header > h1 {
+  font-size: 36px;
+  letter-spacing: 0.9rem;
+}
+
+.home p {
+  font-size: 18px;
+}
+
+.home .hero {
+  position: absolute;
+  background: 
+    linear-gradient(teal 0%, 35%, blue 90%), 
+    linear-gradient(to right, teal 0%, 40%, purple 90%), 
+    url("./Images/piano-min.png");
+  background-position: center;
+  background-blend-mode: screen, difference, lighten;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  min-height: 900px;
+  top: 0;
+  z-index: 1;
 }
