@@ -8,7 +8,13 @@ const Li = (props) => {
                 cursor: props.cursor ? props.cursor : "auto",
                 color: props.color ? props.color : "#000"
             }}
-            onClick={props.onClickEvent ? e => props.onClickEvent(e) : () => { }}
+            onClick={props.onClickEvent ? props.onClickEvent[0]
+                ? e => {
+                    props.onClickEvent[0](e);
+                    props.onClickEvent[1]({ type: props.actionType });
+                }
+                : () => { }
+                : () => { }}
         >
             {props.children}
         </li>
