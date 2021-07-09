@@ -294,7 +294,7 @@ div .highlight::before {
 .home .section2 {
   position: relative;
   top: 100vh;
-  background: #fff;
+  background: rgb(235, 235, 235);
   color: #000;
   padding: 30px 0;
   margin-top: 45px;

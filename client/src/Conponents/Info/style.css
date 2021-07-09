@@ -1,0 +1,27 @@
+.info {
+    background: #fff;
+    width: 90%;
+    height: 300px;
+    margin: 30px auto;
+    padding: 60px 30px;
+    border-radius: 30px;
+}
+
+.info h3 {
+    font-size: 24px;
+}
+
+.info p {
+    font-size: 18px;
+    width: 50%;
+    line-height: 1.6em;
+}
+
+.info img {
+    position: absolute;
+    top: 50%;
+    right: 90px;
+    height: 200px;
+    width: 200px;
+    transform: translateY(-30%);
+}
