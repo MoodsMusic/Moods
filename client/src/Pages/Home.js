@@ -1,5 +1,21 @@
 import React, { useEffect } from 'react';
+import HorizontalUL from '../Conponents/HorizontalUL.js';
+import Li from '../Conponents/Li.js/index.js';
 import Section from '../Conponents/Section';
+
+// Handle if li elements are clicked for style change
+const handleClickEvent = (e) => {
+    e.preventDefault();
+    console.log(e);
+    const liList = document.querySelectorAll(".h-ul .li");
+    liList.forEach((li) => {
+        if (li === e.target) {
+            li.classList.add("active");
+        } else {
+            if (li.classList.contains("active")) li.classList.remove("active");
+        }
+    });
+};
 
 const Home = () => {
 
@@ -53,8 +69,15 @@ const Home = () => {
             </Section>
 
             <Section sectionNum={"section2"}>
-                <p className="text-center">Create posts or diary entries.</p>
-                <p className="text-center">When you create a post you can attach a song for reference</p>
+                <h2 className="text-center">Features</h2>
+
+                <HorizontalUL>
+                    <Li cursor={"pointer"} color={"rgb(0, 68, 255)"} onClickEvent={handleClickEvent}>Songs</Li>
+                    <Li cursor={"pointer"} color={"rgb(0, 68, 255)"} onClickEvent={handleClickEvent}>Playlists</Li>
+                    <Li cursor={"pointer"} color={"rgb(0, 68, 255)"} onClickEvent={handleClickEvent}>Post</Li>
+                    <Li cursor={"pointer"} color={"rgb(0, 68, 255)"} onClickEvent={handleClickEvent}>Connect</Li>
+                </HorizontalUL>
+
             </Section>
         </main>
     );
