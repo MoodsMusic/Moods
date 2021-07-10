@@ -299,4 +299,13 @@ div .highlight::before {
   padding: 30px 0;
   margin-top: 45px;
 }
+
+@media only screen and (max-width: 645px) {
+  .home .section2 .h-ul {
+    flex-direction: column;
+  }
+  .home .section2 .li {
+    margin-top: 12px;
+  }
+}
 /* End home page styling */
