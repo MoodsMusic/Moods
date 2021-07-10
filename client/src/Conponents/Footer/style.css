@@ -1,0 +1,31 @@
+.footer {
+    background: #111;
+    color: #fff;
+    height: 600px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer.footer-home {
+    position: relative;
+    top: 100vh;
+}
+
+.footer h4 {
+    margin: 0;
+    font-size: 30px;
+    padding: 40px 30px;
+}
+
+.footer .li > ul > .li {
+    margin-top: 12px;
+}
+
+.footer .h-ul {
+    align-items: unset;
+}
+
+.footer p {
+    margin-top: 120px;
+    font-size: 24px;
+}
