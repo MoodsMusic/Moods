@@ -89,13 +89,15 @@ const Home = () => {
             </header>
             {/* Div for background image */}
             <div className="hero">
-                <div className="arrow-down">
-                    <i className="fas fa-arrow-alt-circle-down"></i>
-                </div>
+                <a href="#music">
+                    <div className="arrow-down">
+                        <i className="fas fa-arrow-alt-circle-down"></i>
+                    </div>
+                </a>
             </div>
 
             <Section sectionNum={"section1"}>
-                <h2 className="text-center">Music</h2>
+                <h2 id="music" className="text-center">Music</h2>
                 <div id="highlight-effect">
                     <div className="left-col">
                         <p><span className="highlight">Search for songs from our collection</span></p>
