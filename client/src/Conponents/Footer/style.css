@@ -30,6 +30,12 @@
     font-size: 24px;
 }
 
+.footer.footer.footer-default {
+    position: absolute;
+    bottom: 0vh;
+    height: 500px;
+}
+
 @media only screen and (max-width: 650px) {
     .footer .h-ul {
         flex-direction: column;
@@ -43,5 +49,10 @@
     .footer p {
         margin-top: 60px;
         padding-bottom: 12px;
+    }
+
+    .footer.footer.footer-default {
+        min-height: 900px;
+        bottom: -50vh;
     }
 }
