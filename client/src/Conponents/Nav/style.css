@@ -32,3 +32,8 @@ nav {
 nav span {
     margin: 0 16px;
 }
+
+.nav.nav-login,
+.nav.nav-register {
+    color: #000 !important;
+}
