@@ -11,7 +11,7 @@ const Li = (props) => {
             onClick={props.onClickEvent ? props.onClickEvent[0]
                 ? e => {
                     props.onClickEvent[0](e);
-                    props.onClickEvent[1] ? props.onClickEvent[1]({ type: props.actionType }) : () => { };
+                    props.onClickEvent[1]({ type: props.actionType });
                 }
                 : () => { }
                 : () => { }}

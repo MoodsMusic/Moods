@@ -36,10 +36,11 @@ describe("List item component Li", () => {
 
     test("It passes click events correctly", () => {
         const dummyFn = jest.fn();
+        const dummyFn2 = jest.fn();
 
         const { getByText } = render(
             <ul>
-                <Li color={"blue"} cursor={"pointer"} onClickEvent={[dummyFn]}>Test</Li>
+                <Li color={"blue"} cursor={"pointer"} onClickEvent={[dummyFn, dummyFn2]}>Test</Li>
                 <Li>Test2</Li>
             </ul>
         );
