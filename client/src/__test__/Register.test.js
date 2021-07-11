@@ -1,7 +1,6 @@
 import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-
-import Register from "../pages/Register";
+import Register from "../Pages/Register";
 
 describe("Register page", () => {
     test("It renders and doesnt show nav login", () => {
