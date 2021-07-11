@@ -32,7 +32,7 @@
 
 .footer.footer.footer-default {
     position: absolute;
-    bottom: 0vh;
+    top: 100vh;
     height: 500px;
 }
 
