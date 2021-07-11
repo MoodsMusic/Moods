@@ -8,7 +8,8 @@ const Footer = () => {
 
     // Variable to store page location from react-broswer-dom.
     let location = useLocation();
-    if (location.pathname = "/") location = "home";
+    if (location.pathname === "/") location = "home";
+    else location = "default";
 
     return (
         <footer className={`footer footer-${location}`}>
