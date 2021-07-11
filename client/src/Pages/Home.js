@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from 'react';
 import HorizontalUL from '../Conponents/HorizontalUL.js';
 import Info from '../Conponents/Info/index.js';
-import Li from '../Conponents/Li.js/index.js';
+import Li from '../Conponents/Li/index.js';
 import Section from '../Conponents/Section';
 
 // Handle if li elements are clicked for style change
