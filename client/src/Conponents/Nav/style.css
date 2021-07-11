@@ -21,6 +21,30 @@ nav {
     z-index: 100;
 }
 
+.nav-scrolled {
+    animation: fade-in 1.2s forwards;
+}
+.nav-not-scrolled {
+    animation: fade-out 1.2s forwards;
+}
+
+@keyframes fade-in {
+    from {
+        background: inherit;
+    }
+    to {
+        background: #000;
+    }
+}
+@keyframes fade-out {
+    from {
+        background: #000;
+    }
+    to {
+        background: inherit;
+    }
+}
+
 .nav-left, .nav-right {
     display: flex;
     align-items: center;
