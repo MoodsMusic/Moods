@@ -55,7 +55,7 @@ export default function Register() {
     // Redirect user if logged in
     useEffect(() => {
         if (userInfo) {
-            history.push("/");
+            history.push("/members");
         }
     }, [userInfo, history]);
 

@@ -52,7 +52,7 @@ function Login() {
     useEffect(() => {
         // If user logged in, redirect to main page
         if (userInfo) {
-            history.push("/");
+            history.push("/members");
         }
     }, [userInfo, history]);
 

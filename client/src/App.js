@@ -5,6 +5,7 @@ import Footer from "./Conponents/Footer";
 import Nav from "./Conponents/Nav";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
+import Members from "./Pages/Members";
 import Register from "./Pages/Register";
 
 function App() {
@@ -37,6 +38,8 @@ function App() {
       <Route exact path="/login" component={Login} />
 
       <Route exact path="/register" component={Register} />
+
+      <Route exact path="/members" component={Members} />
 
       <Footer />
     </Router>
