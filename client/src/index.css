@@ -20,3 +20,11 @@ a {
   text-decoration: none;
   color: inherit
 }
+
+.text-light {
+  color: #fff !important;
+}
+
+.btn-large {
+  font-size: 18px !important;
+}
