@@ -2,9 +2,14 @@
     padding: 1rem;
     border: 0.1rem solid transparent;
     border: 0.5rem;
+    font-size: 22px;
 };
 
 .alert-danger {
-    background: crimson;
+    background: crimson !important;
     color: #fff;
 };
+
+.alert-info {
+    background: darkcyan !important;
+}
