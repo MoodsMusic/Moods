@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -9,6 +11,8 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import MessageBox from "../Conponents/MessageBox";
+import { registerAction } from '../Actions/userActions';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -33,10 +37,45 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Register() {
     const classes = useStyles();
+    const dispatch = useDispatch();
+    const history = useHistory();
+    const [fieldError, setFieldError] = useState("");
+
+    // Input refs
+    const fNameRef = useRef("");
+    const lNameRef = useRef("");
+    const usernameRef = useRef("");
+    const passwordRef = useRef("");
+    const emailRef = useRef("");
+
+    // User info if already logged in
+    const userLoginInfo = useSelector(state => state.userRegister);
+    const { userInfo, error } = userLoginInfo;
+
+    // Redirect user if logged in
+    useEffect(() => {
+        if (userInfo) {
+            history.push("/");
+        }
+    }, [userInfo, history]);
+
+    const handleUserRegister = (e) => {
+        e.preventDefault();
+
+        if (!fNameRef.current.value || !lNameRef.current.value || !usernameRef.current.value || !emailRef.current.value || !passwordRef.current.value) {
+            setFieldError("Please fill out all required fields");
+        } else {
+            setFieldError("");
+        }
+
+        dispatch(registerAction(fNameRef.current.value, lNameRef.current.value, usernameRef.current.value, emailRef.current.value, passwordRef.current.value));
+    }
 
     return (
         <Container component="main" maxWidth="xs">
             <CssBaseline />
+            {error && <MessageBox variant={"crimson"}>{error}</MessageBox>}
+            {fieldError && <MessageBox variant={"crimson"}>{fieldError}</MessageBox>}
             <div className={classes.paper}>
                 <Avatar className={classes.avatar}>
                     <LockOutlinedIcon />
@@ -56,6 +95,7 @@ export default function Register() {
                                 id="firstName"
                                 label="First Name"
                                 autoFocus
+                                inputRef={fNameRef}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -67,6 +107,7 @@ export default function Register() {
                                 label="Last Name"
                                 name="lastName"
                                 autoComplete="lname"
+                                inputRef={lNameRef}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -77,6 +118,7 @@ export default function Register() {
                                 id="username"
                                 label="Username"
                                 name="username"
+                                inputRef={usernameRef}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -88,6 +130,7 @@ export default function Register() {
                                 label="Email Address"
                                 name="email"
                                 autoComplete="email"
+                                inputRef={emailRef}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -100,11 +143,12 @@ export default function Register() {
                                 type="password"
                                 id="password"
                                 autoComplete="current-password"
+                                inputRef={passwordRef}
                             />
                         </Grid>
                     </Grid>
                     <Button
-                        type="submit"
+                        onClick={e => handleUserRegister(e)}
                         fullWidth
                         variant="contained"
                         color="primary"
