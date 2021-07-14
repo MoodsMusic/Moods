@@ -63,9 +63,9 @@ function Login() {
     };
 
     return (
-        <div>
+        <div className="login">
             {error && <MessageBox variant={"crimson"}>{error}</MessageBox>}
-            <Container className="login" component="main" maxWidth="sm">
+            <Container component="main" maxWidth="sm">
                 <CssBaseline />
                 <div className={classes.paper}>
                     <Avatar className={classes.avatar}>

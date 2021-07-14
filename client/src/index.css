@@ -9,7 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   min-height: 100vh;
-  background: #111;
+  background: #111 !important;
 }
 
 .text-center {
