@@ -17,6 +17,7 @@ nav {
 
 .nav-scrolled {
     animation: fade-in 1.2s forwards;
+    color: #fff !important;
 }
 .nav-not-scrolled {
     animation: fade-out 1.2s forwards;
@@ -53,5 +54,5 @@ nav span {
 
 .nav.nav-login,
 .nav.nav-register {
-    color: #000 !important;
+    color: #000;
 }
