@@ -38,6 +38,7 @@
     .footer .h-ul {
         flex-direction: column;
         padding-left: 80px;
+        width: initial;
     }
 
     .footer .li {

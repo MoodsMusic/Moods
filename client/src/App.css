@@ -187,17 +187,17 @@ div .highlight::before {
 /* Increase spacing of p elements */
 .home .section1 > div > .left-col p:first-of-type,
 .home .section1 > div > .right-col p:first-of-type {
-  padding-left: 10vw;
+  padding-left: 8vw;
 }
 
 .home .section1 > div > .left-col p:nth-of-type(2),
 .home .section1 > div > .right-col p:nth-of-type(2) {
-  padding-left: 15vw;
+  padding-left: 13vw;
 }
 
 .home .section1 > div > .left-col p:last-of-type,
 .home .section1 > div > .right-col p:last-of-type {
-  padding-left: 20vw;
+  padding-left: 18vw;
 }
 
 @media only screen and (max-width: 965px) {
