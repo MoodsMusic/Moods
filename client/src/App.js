@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
-import Footer from "./Conponents/Footer";
-import Nav from "./Conponents/Nav";
+import Nav from "./Components/Nav";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import Members from "./Pages/Members";
 import Register from "./Pages/Register";
+import Footer from "./Components/Footer";
 
 function App() {
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from "react-router-dom";
-import HorizontalUL from '../HorizontalUL.js';
 import Li from '../Li/index.js';
+import HorizontalUL from "../HorizontalUL";
 import "./style.css";
 
 const Footer = () => {

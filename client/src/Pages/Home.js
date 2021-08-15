@@ -1,8 +1,8 @@
 import React, { useEffect, useReducer } from 'react';
-import HorizontalUL from '../Conponents/HorizontalUL.js';
-import Info from '../Conponents/Info/index.js';
-import Li from '../Conponents/Li/index.js';
-import Section from '../Conponents/Section';
+import HorizontalUL from '../Components/HorizontalUL/index.js';
+import Info from "../Components/Info";
+import Li from "../Components/Li";
+import Section from "../Components/Section";
 
 // Handle if li elements are clicked for style change
 const handleClickEvent = (e) => {

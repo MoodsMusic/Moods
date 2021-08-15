@@ -1,9 +1,15 @@
 import React from 'react';
+import LeftMenu from '../Components/LeftMenu/LeftMenu';
+import MenuList from '../Components/MenuList';
 
 const Members = () => {
     return (
-        <main>
-            members landing
+        <main className="members-landing">
+            <LeftMenu>
+                <MenuList>
+
+                </MenuList>
+            </LeftMenu>
         </main>
     );
 };

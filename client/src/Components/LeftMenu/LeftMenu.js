@@ -1,10 +1,11 @@
 import React from 'react';
+import "./style.module.css";
 
-const LeftMenu = () => {
+const LeftMenu = (props) => {
     return (
-        <div className="left-menu">
-
-        </div>
+        <section className="left-menu">
+            {props.children}
+        </section>
     );
 };
 
