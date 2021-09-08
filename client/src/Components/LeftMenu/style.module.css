@@ -1,6 +1,7 @@
 .left-menu {
-    width: 30%;
-    border-right: 2px solid black;
+    width: 33%;
+    min-height: 100% !important;
+    border-right: 2px solid teal;
     margin: 0;
     padding: 0;
 }

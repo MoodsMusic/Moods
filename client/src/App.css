@@ -310,6 +310,7 @@ div .highlight::before {
 }
 /* End home page styling */
 
+/* Login / register */
 .login, .register {
   background: #fff;
   min-height: 100vh;
@@ -317,4 +318,12 @@ div .highlight::before {
   position: relative;
   top: 0;
   padding-top: 10vh;
+}
+
+/* End Login / Register */
+
+/* Members page */
+.members-landing {
+  width: 100%;
+  min-height: 100vh;
 }
